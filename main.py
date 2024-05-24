@@ -26,9 +26,18 @@ class   MainProgram:
             with open(csv_filename, mode='r', newline='') as file:
                 self._instances = [row for row in csv.reader(file)]
         except:
+            # maybe instead of exiting directly I can first try to call update_csv
             print(f"{csv_filename} doesn't exists or you don't have permissions", file=sys.stderr)
             sys.exit(1)
     
+    '''
+    Retrieves the list with the instances and
+    stores them in instances.csv to retrieve all the data.
+    '''
+    def update_csv(self):
+        # to implement
+        pass
+
     '''
     Displays instances in a "pretty" manner
     '''
